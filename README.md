@@ -46,10 +46,10 @@ There are many deep generative models for image super resolution. The goal of th
 - The `notebooks` directory contains detailed explanations (along with the math) of some popular deep generative models like the Denoising Diffusion Probabilistic model (DDPM), Variational Autoencoder (VAE), and Generative Adversarial Networks (GANs). I highly recommend reading these notebooks to anybody who wants to get an intuitive understanding of these deep generative models. Note: these notebooks only contain the simplest version of the models. They are not meant to be used for image super resolution, but rather for educational purposes.
 - The `main.py` file contains the code to train and evaluate the model.
 
-## **SRDDPM Architecture**
+<!-- ## **SRDDPM Architecture**
 
 You can run the SRDDPM architecture end-to-end using my [Kaggle notebook](https://www.kaggle.com/code/aryamanbansal/srddpm).
 
 ## **Dataset**
 
-To train SRDDPM, I used the [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) dataset available on [Kaggle](https://www.kaggle.com/datasets/soumikrakshit/div2k-high-resolution-images).
+To train SRDDPM, I used the [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) dataset available on [Kaggle](https://www.kaggle.com/datasets/soumikrakshit/div2k-high-resolution-images). -->
