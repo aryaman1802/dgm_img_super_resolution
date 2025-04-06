@@ -7,22 +7,6 @@ A repository containing deep generative models for image super resolution. This 
 ## **Repository Structure**
 
 ```bash
-├── srdiff
-│   ├── __init__.py
-│   ├── architecture.py
-│   ├── data_preprocessing.py
-│   ├── loss_func.py
-│   ├── srdiff_notebook.ipynb
-│   ├── training.py
-│   ├── utils.py
-├── srgan
-|   ├── __init__.py
-│   ├── architecture.py
-│   ├── data_preprocessing.py
-│   ├── loss_func.py
-│   ├── srgan_notebook.ipynb
-│   ├── training.py
-|   ├── utils.py
 ├── srddpm
 │   ├── __init__.py
 │   ├── architecture.py
@@ -45,10 +29,11 @@ A repository containing deep generative models for image super resolution. This 
 
 There are many deep generative models for image super resolution. The goal of this repo is not to build a model that outperforms the state of the art, but to build a model from scratch for educational purposes. We will focus on building a diffusion model for image super resolution, which we will call **SRDDPM**. 
 
-- The directories contain modular and jupyter notebook implementations of deep generative models for image super resolution. 
+<!-- - The directories contain modular and jupyter notebook implementations of deep generative models for image super resolution. 
     - The `srdiff` directory contains the code for an existing diffusion architecture meant for image super resolution - [SRDiff](https://arxiv.org/abs/2104.14951).
     - The `srgan` directory contains the code for an existing GAN architecture meant for image super resolution - [SRGAN](https://arxiv.org/abs/1609.04802).
-    - The `srddpm` directory contains the code for a diffusion architecture meant for image super resolution - SRDDPM. As per my knowledge, this is not an existing architecture. I have created it by combining parts of SRGAN and SRDiff. However, this architecture has not been developed from the perspective of outperforming the state of the art. Rather, it is my attempt to better my understanding of how deep generative models can be used for image super resolution. I have not done any hyperparameter tuning or architecture tuning.  
+    - The `srddpm` directory contains the code for a diffusion architecture meant for image super resolution - SRDDPM. As per my knowledge, this is not an existing architecture. I have created it by combining parts of SRGAN and SRDiff. However, this architecture has not been developed from the perspective of outperforming the state of the art. Rather, it is my attempt to better my understanding of how deep generative models can be used for image super resolution. I have not done any hyperparameter tuning or architecture tuning.   -->
+- The `srddpm` directory contains the code for a diffusion architecture meant for image super resolution - SRDDPM. As per my knowledge, this is not an existing architecture. I have created it by combining parts of SRGAN and SRDiff. However, this architecture has not been developed from the perspective of outperforming the state of the art. Rather, it is my attempt to better my understanding of how deep generative models can be used for image super resolution. I have not done any hyperparameter tuning or architecture tuning.
 - The `notebooks` directory contains detailed explanations (along with the math) of some popular deep generative models like the Denoising Diffusion Probabilistic model (DDPM), Variational Autoencoder (VAE), and Generative Adversarial Networks (GANs). I highly recommend reading these notebooks to anybody who wants to get an intuitive understanding of these deep generative models. Note: these notebooks only contain the simplest version of the models. They are not meant to be used for image super resolution, but rather for educational purposes.
 
 <!-- ## **SRDDPM Architecture**
