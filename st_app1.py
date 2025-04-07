@@ -25,7 +25,6 @@ import torch.distributed as dist
 import numpy as np
 # import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib import cm
 import random
 
 from PIL import Image
@@ -1713,9 +1712,6 @@ if st.button("Enhance"):
     enhanced_img.save(buf, format="PNG")
     byte_im = buf.getvalue()
     
-    # curr_path = os.get_cwd()
-    # file_name = os.path.join(curr_path, "enhanced image.png")
-
     st.download_button(
         label="Download Enhanced Image",
         data=byte_im,
@@ -1725,4 +1721,4 @@ if st.button("Enhance"):
 
 # To run the streamlit app, open and the terminal and navigate to the 
 # directory of this file, and then type:
-# streamlit run st_app3.py
+# streamlit run st_app1.py
