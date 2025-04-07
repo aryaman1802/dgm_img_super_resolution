@@ -9,7 +9,6 @@ A repository containing deep generative models for image super resolution. This 
 ```bash
 ├── srdiff
 │   ├── config.yaml
-│   ├── model_ckpt_steps_400000.ckpt
 │   ├── model.py
 │   ├── srdiff_notebook.ipynb
 ├── notebooks
