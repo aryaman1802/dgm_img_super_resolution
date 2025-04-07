@@ -1,15 +1,7 @@
 from __future__ import print_function
 
 import streamlit as st
-import os
-import torch
-import yaml
-import numpy as np
-import matplotlib.pyplot as plt
-from PIL import Image
-import torchvision.transforms as transforms
-import torch.nn.functional as F
-from torch import nn
+from io import BytesIO
 
 # code is taken from: https://github.com/LeiaLi/SRDiff/tree/main
 
@@ -33,6 +25,7 @@ import torch.distributed as dist
 import numpy as np
 # import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib import cm
 import random
 
 from PIL import Image
@@ -1691,9 +1684,7 @@ def model_inference(image):
     enhanced_img = (enhanced_img + 1) / 2
     enhanced_img = enhanced_img.permute(1, 2, 0).numpy()
     
-    plt.imshow(enhanced_img)
-    plt.axis('off')
-    plt.title("Enhanced (High Resolution)")
+    return enhanced_img
 
 
 fig = plt.figure(figsize=(1,2))
@@ -1706,12 +1697,31 @@ img_file = st.file_uploader(label="upload an image",
                             )
 
 if img_file is not None:
-    st.image(img_file, caption="Any image", width=256)
+    st.image(img_file, caption="", width=256)
 
 if st.button("Enhance"):
-    model_inference(img_file)
+    enhanced_img = model_inference(img_file)
+    plt.imshow(enhanced_img)
+    plt.axis('off')
+    plt.title("Enhanced (High Resolution)")
+    st.pyplot(fig)
 
-st.pyplot(fig)
+    # Create a download button for the upscaled image
+    buf = BytesIO()
+    enhanced_img = np.clip(enhanced_img * 255, 0, 255).astype(np.uint8)
+    enhanced_img = Image.fromarray(enhanced_img).convert('RGB')
+    enhanced_img.save(buf, format="PNG")
+    byte_im = buf.getvalue()
+    
+    # curr_path = os.get_cwd()
+    # file_name = os.path.join(curr_path, "enhanced image.png")
+
+    st.download_button(
+        label="Download Enhanced Image",
+        data=byte_im,
+        file_name="enhanced_image.png",
+        mime="image/png"
+    )
 
 # To run the streamlit app, open and the terminal and navigate to the 
 # directory of this file, and then type:
