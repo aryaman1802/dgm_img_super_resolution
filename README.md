@@ -52,7 +52,7 @@ or
 streamlit run st_app2.py
 ```
 
-These apps will allow you to upload an image and get the super-resolved image as output. Following images show the screenshots of the Streamlit app runnnig the SRDiff model:
+These apps will allow you to upload an image and get the super-resolved image as output. Following images show the screenshots of the Streamlit app (`st_app1.py`) runnnig the SRDiff model:
 
 ![st_demo1](st_demo1.png "st_demo1")
 
