@@ -42,7 +42,7 @@ I have tried 2 different diffusion-based architectures for image super resolutio
 
 The SRDiff gives inferior results compared to the Stable Diffusion model. However, we can run it on CPU, while the Stable Diffusion model requires a GPU. 
 
-I have deployed both models on Streamlit. The `st_app1.py` and `st_app2.py` files contain the code for the Streamlit app. You can run the app using the following command:
+I have deployed both models on Streamlit. The `st_app1.py` (for SRDiff) and `st_app2.py` (for Stable Diffusion) files contain the code for the Streamlit app. You can run the app using the following command from the terminal:
 
 ```bash
 streamlit run st_app1.py
@@ -59,7 +59,15 @@ These apps will allow you to upload an image and get the super-resolved image as
 
 ![st_demo2](st_demo2.png "st_demo2")
 
-Note: Unless you have a really good laptop, running the Streamlit apps will take some time (~ 15 seconds)...
+**Note:** Unless you have a really good laptop, running the Streamlit apps will take some time (~ 15 seconds)...
+
+**Another Note:** I haven't uploaded the model weights for SRDiff, because github doesn't allow uploading large files. You can download the model weights from [here](https://github.com/LeiaLi/SRDiff/releases/tag/v1.0.0) and place them in the `srdiff` directory. I would suggest using my Kaggle notebooks for a complete end-to-end experience, without having to setup or download anything:
+- [SRDiff](https://www.kaggle.com/code/aryamanbansal/srdiff)
+- [Stable Diffusion](https://www.kaggle.com/code/aryamanbansal/diffuser-stablediffusion-super-resolution). 
+
+<br>
+
+Following is some information about the files in the directories:
 
 - The `srdiff` directory contains the code for an existing diffusion architecture meant for image super resolution [SRDiff](https://arxiv.org/abs/2104.14951). 
 - The `notebooks` directory contains detailed explanations (along with the math) of some popular deep generative models like the Denoising Diffusion Probabilistic model (DDPM), Variational Autoencoder (VAE), and Generative Adversarial Networks (GANs), implemented from scratch in PyTorch. I highly recommend reading these notebooks to anybody who wants to get an intuitive understanding of these deep generative models. Note: these notebooks only contain the simplest version of the models. They are not meant to be used for image super resolution, but rather for educational purposes.
