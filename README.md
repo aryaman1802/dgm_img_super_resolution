@@ -39,7 +39,7 @@ I have tried 2 different diffusion-based architectures for image super resolutio
 - [SRDiff](https://arxiv.org/abs/2104.14951).
 - [Stable Diffusion](https://huggingface.co/docs/diffusers/en/api/pipelines/stable_diffusion/upscale).
 
-The SRDiff gives inferior results compared to the Stable Diffusion model. However, we can run it on CPU, while the Stable Diffusion model requires a GPU. 
+The SRDiff model gives inferior results compared to the Stable Diffusion model. However, we can run it on CPU, while the Stable Diffusion model requires a GPU. 
 
 I have deployed both models on Streamlit. The `st_app1.py` (for SRDiff) and `st_app2.py` (for Stable Diffusion) files contain the code for the Streamlit app. You can run the app using the following command from the terminal:
 
